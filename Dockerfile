@@ -14,10 +14,10 @@ RUN apt-get install -y qt5-default
 ADD . /usr/src/Project
 WORKDIR usr/src/Project/App
 RUN qmake -project
-RUN qmake app1.pro
-RUN echo "QT+=qml" >> app1.pro
-RUN echo "QT+=core" >> app1.pro
-RUN echo "CONFIG+=console" >> app1.pro
-RUN echo "QMAKE_LFLAGS += -no-pie" >> app1.pro
+RUN qmake App3.pro
+RUN echo "QT+=qml" >> App3.pro
+RUN echo "QT+=core" >> App3.pro
+RUN echo "CONFIG+=console" >> App3.pro
+RUN echo "QMAKE_LFLAGS += -no-pie" >> App3.pro
 RUN make
 CMD echo "App build completed"
