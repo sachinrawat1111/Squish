@@ -12,5 +12,7 @@ pipeline {
         stage('Squish'){
         steps{
         squish([squishPackageName: 'Squish', testSuite: '/home/sachin/Squish/App'])
+        }
+      }
     }
 }
